@@ -1,0 +1,199 @@
+.farmer-registration-page {
+  min-height: calc(100vh - 65px);
+  padding: 40px 20px 48px;
+  background: #f6f9fc;
+  color: #0f172a;
+}
+
+.farmer-registration-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.farmer-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.farmer-back-link:hover {
+  color: #047857;
+}
+
+.farmer-registration-card {
+  padding: 38px;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.farmer-form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.farmer-form-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: #047857;
+  background: #d1fae5;
+}
+
+.farmer-form-header h1 {
+  margin: 0 0 4px;
+  font-size: 23px;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.farmer-form-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.farmer-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 15px;
+}
+
+.farmer-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.farmer-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.farmer-field label {
+  color: #1e293b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.farmer-field input,
+.farmer-field select {
+  width: 100%;
+  min-width: 0;
+  height: 39px;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  outline: none;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.farmer-field input:focus,
+.farmer-field select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.farmer-field input::placeholder {
+  color: #94a3b8;
+}
+
+.farmer-form-divider {
+  margin: 16px 0 12px;
+  border-top: 1px solid #edf2f7;
+}
+
+.farmer-form-section-title {
+  margin: 0 0 18px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+}
+
+.farmer-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 30px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 11px;
+  background: #059669;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(5, 150, 105, 0.2);
+  transition: background 0.2s;
+}
+
+.farmer-submit-button:hover {
+  background: #047857;
+}
+
+.farmer-login-prompt {
+  margin: 23px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.farmer-login-prompt a {
+  color: #047857;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.farmer-login-prompt a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .farmer-registration-page {
+    padding: 25px 14px 35px;
+  }
+
+  .farmer-registration-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .farmer-form-header {
+    align-items: flex-start;
+  }
+
+  .farmer-form-header h1 {
+    font-size: 20px;
+  }
+
+  .farmer-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-field.full-width {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,197 @@
+.shop-registration-page {
+  min-height: calc(100vh - 65px);
+  padding: 40px 20px 48px;
+  background: #f6f9fc;
+  color: #0f172a;
+}
+
+.shop-registration-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.shop-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.shop-back-link:hover {
+  color: #c66a00;
+}
+
+.shop-registration-card {
+  padding: 38px;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.shop-form-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.shop-form-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.shop-form-header h1 {
+  margin: 0 0 4px;
+  color: #0f172a;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.shop-form-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.shop-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 15px;
+}
+
+.shop-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shop-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.shop-field label {
+  color: #1e293b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.shop-field input {
+  width: 100%;
+  min-width: 0;
+  height: 39px;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  outline: none;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.shop-field input:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.12);
+}
+
+.shop-field input::placeholder {
+  color: #94a3b8;
+}
+
+.shop-form-divider {
+  margin: 16px 0 12px;
+  border-top: 1px solid #edf2f7;
+}
+
+.shop-section-title {
+  margin: 0 0 18px;
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.shop-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 30px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 11px;
+  background: #df7900;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(217, 119, 6, 0.2);
+  transition: background 0.2s;
+}
+
+.shop-submit-button:hover {
+  background: #c66a00;
+}
+
+.shop-login-prompt {
+  margin: 23px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.shop-login-prompt a {
+  color: #c66a00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.shop-login-prompt a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .shop-registration-page {
+    padding: 25px 14px 35px;
+  }
+
+  .shop-registration-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .shop-form-header {
+    align-items: flex-start;
+  }
+
+  .shop-form-header h1 {
+    font-size: 20px;
+  }
+
+  .shop-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-field.full-width {
+    grid-column: auto;
+  }
+}
