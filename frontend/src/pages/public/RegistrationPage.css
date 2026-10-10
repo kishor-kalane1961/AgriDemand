@@ -1,0 +1,196 @@
+.registration-page {
+  min-height: calc(100vh - 65px);
+  padding: 54px 24px 40px;
+  background: #f6f9fc;
+  color: #0f172a;
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.registration-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.registration-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.registration-heading h1 {
+  margin: 15px 0 10px;
+  color: #0f172a;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.registration-heading > p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.registration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.registration-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 3px 6px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.registration-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+.registration-card.farmer .registration-icon {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.registration-card.shop .registration-icon {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.registration-card h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.registration-description {
+  min-height: 48px;
+  margin: 0 0 20px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.registration-card ul {
+  display: grid;
+  gap: 13px;
+  padding: 0;
+  margin: 0 0 28px;
+  list-style: none;
+}
+
+.registration-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.registration-card.farmer li svg {
+  flex-shrink: 0;
+  color: #059669;
+}
+
+.registration-card.shop li svg {
+  flex-shrink: 0;
+  color: #d97706;
+}
+
+.registration-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: auto;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: filter 0.2s ease;
+}
+
+.registration-card.farmer .registration-button {
+  background: #059669;
+}
+
+.registration-card.shop .registration-button {
+  background: #df7900;
+}
+
+.registration-button:hover {
+  filter: brightness(0.92);
+}
+
+.registration-signin {
+  margin: 30px 0 0;
+  text-align: center;
+  color: #475569;
+  font-size: 13px;
+}
+
+.registration-signin a {
+  color: #047857;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.registration-signin a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  .registration-page {
+    padding: 35px 16px;
+  }
+
+  .registration-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 20px;
+  }
+
+  .registration-card {
+    padding: 26px;
+  }
+
+  .registration-description {
+    min-height: auto;
+  }
+}
