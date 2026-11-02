@@ -1,0 +1,190 @@
+/* Main application layout */
+.shop-owner-layout {
+  --navbar-height: 82px;
+  --sidebar-width: 315px;
+
+  min-height: 100vh;
+  background: #f4f7fa;
+}
+
+/* Full-width navbar */
+.shop-top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+
+  height: var(--navbar-height);
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Brand */
+.shop-navbar-brand {
+  flex-shrink: 0;
+}
+
+.shop-navbar-brand h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.shop-navbar-brand h2 span {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 4px 7px;
+
+  border-radius: 5px;
+  background: #d1fae5;
+  color: #047857;
+
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.shop-navbar-brand p {
+  margin: 2px 0 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* Center navigation */
+.shop-navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.shop-navbar-links a,
+.shop-login-link {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.shop-navbar-links a:hover,
+.shop-login-link:hover {
+  color: #059669;
+}
+
+/* Navbar buttons */
+.shop-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.shop-get-started {
+  padding: 13px 22px;
+  border-radius: 11px;
+
+  background: #059669;
+  color: white;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.shop-get-started:hover {
+  background: #047857;
+}
+
+/* Sidebar position */
+.shop-sidebar {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  bottom: 0;
+
+  z-index: 1000;
+
+  width: var(--sidebar-width);
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Dashboard starts below navbar and beside sidebar */
+.shop-owner-main {
+  min-height: 100vh;
+
+  margin-left: var(--sidebar-width);
+  padding: calc(var(--navbar-height) + 30px) 32px 32px;
+
+  box-sizing: border-box;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1000px) {
+  .shop-top-navbar {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .shop-navbar-links {
+    gap: 14px;
+  }
+
+  .shop-navbar-links a {
+    font-size: 12px;
+  }
+
+  .shop-owner-layout {
+    --sidebar-width: 260px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shop-top-navbar {
+    padding: 0 16px;
+  }
+
+  .shop-navbar-links {
+    display: none;
+  }
+
+  .shop-navbar-actions {
+    gap: 12px;
+  }
+
+  .shop-get-started {
+    padding: 10px 12px;
+  }
+
+  .shop-owner-layout {
+    --sidebar-width: 220px;
+  }
+
+  .shop-owner-main {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .shop-sidebar-header {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .shop-sidebar-item {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
