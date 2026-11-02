@@ -1,11 +1,11 @@
 package com.agridemand.backend.farmer.controller;
 
 import com.agridemand.backend.farmer.dto.FarmerProfileResponse;
+import com.agridemand.backend.farmer.dto.FarmerProfileUpdateRequest;
 import com.agridemand.backend.farmer.service.FarmerProfileService;
+
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/farmer")
@@ -18,12 +18,25 @@ public class FarmerProfileController {
         this.farmerProfileService = farmerProfileService;
     }
 
+    // Retrieve the authenticated farmer's profile
     @GetMapping("/me")
     public FarmerProfileResponse getMyProfile(
             Authentication authentication) {
 
-        String email = authentication.getName();
+        return farmerProfileService.getMyProfile(
+                authentication.getName()
+        );
+    }
 
-        return farmerProfileService.getMyProfile(email);
+    // Update the authenticated farmer's profile
+    @PutMapping("/me")
+    public FarmerProfileResponse updateMyProfile(
+            Authentication authentication,
+            @RequestBody FarmerProfileUpdateRequest request) {
+
+        return farmerProfileService.updateMyProfile(
+                authentication.getName(),
+                request
+        );
     }
 }
